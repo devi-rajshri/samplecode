@@ -60,7 +60,7 @@ object CompareList {
     if(listA.isEmpty || listB.isEmpty || listA.containsSlice(listB) || listB.containsSlice(listA)) true
     else {
       val intersection = listA.intersect(listB)
-      listA.filterNot(intersection.contains).isEmpty || listB.filterNot(intersection.contains).isEmpty
+      listA.forall(intersection.contains) || listB.forall(intersection.contains)
     }
   }
 

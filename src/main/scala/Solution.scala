@@ -224,6 +224,11 @@ object Counter {
   }
 }
 
+/**
+  * Go through  stream of characters and determine if all braces are closed or open in it.
+  * Assume only alphanumeric characters and ( { and [ kind of braces are allowed in the input.
+  */
+
 object Solution {
   val pairs = Seq(Pair('(',')'),Pair('{','}'),Pair('[',']'))
   def solution(S: String): Int = {
